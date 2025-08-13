@@ -36,6 +36,17 @@ const Register = () => {
               />
             </Field.Root>
             <Field.Root>
+              <Field.Label>Username</Field.Label>
+              <Input
+                name="username"
+                placeholder="Enter your username"
+                type="text"
+                value={form.username}
+                onChange={(e) => setForm({ ...form, username: e.target.value })}
+                required
+              />
+            </Field.Root>
+            <Field.Root>
               <Field.Label>Phone Number</Field.Label>
               <Input
                 name="phone"

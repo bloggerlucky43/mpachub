@@ -21,6 +21,9 @@ const NavBar = ({ onNavClick, refs }) => {
       bg="whiteAlpha.100"
       backdropFilter="blur(12px)"
       boxShadow="sm"
+      data-aos="fade-down"
+      data-aos-duration="1000"
+      data-aos-delay="100"
       zIndex={100}
       position="fixed"
       top={0}

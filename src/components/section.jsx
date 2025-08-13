@@ -10,6 +10,7 @@ import {
   CloseButton,
   useBreakpointValue,
 } from "@chakra-ui/react";
+import { keyframes } from "@emotion/react";
 import FadeContent from "./styles/FadeContent";
 import TextType from "./styles/TextType";
 import heroimg from "../assets/hero-img.png";
@@ -18,6 +19,16 @@ import "../components/ui/section.css";
 const Section = ({ sectRef }) => {
   const [showModal, setShowModal] = useState(false);
   const isMobile = useBreakpointValue({ base: true, md: false });
+
+  const float = keyframes`
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+`;
+
   return (
     <Flex
       ref={sectRef}
@@ -100,7 +111,7 @@ const Section = ({ sectRef }) => {
         <Image
           src={heroimg}
           loading="lazy"
-          // height={isMobile ? "300px" : "600px"}
+          animation={`${float} 3s ease-in-out infinite`}
         />
       </Box>
     </Flex>
@@ -108,5 +119,3 @@ const Section = ({ sectRef }) => {
 };
 
 export default Section;
-
-// MPAC ICT HUB is the regional hub for ICT training, offering expert-led courses in various fields such as website development, digital security, UI/UX design, 3D modeling and animation, visual communication design, AutoCAD drafting, Cisco networking (CCNA & CCNP), computer systems engineering, IT fundamentals, mobile app development, cybersecurity, ethical hacking, AI and machine learning and Student Industrial Work Experience Scheme(SIWES) programs. The hub aims to equip individuals with the necessary skills and knowledge to excel in the ever-evolving ICT landscape, fostering innovation and technological advancement in the region.

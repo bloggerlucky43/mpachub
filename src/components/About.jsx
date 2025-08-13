@@ -23,7 +23,7 @@ const About = ({ infoRef }) => {
       <Text fontWeight="bold" fontSize="xx-large" mb={4} color="blue.700">
         About Us
       </Text>
-      <Box>
+      <Box data-aos="fade-up">
         <Text>
           At MPAC ICT HUB, we believe technology is the gateway to opportunity.
           Our mission is simple. To equip individuals and businesses with the
@@ -40,7 +40,7 @@ const About = ({ infoRef }) => {
           designed to be practical, project-focused, and industry-relevant.
         </Text>
 
-        <Box mt={6}>
+        <Box data-aos="fade-up" mt={6}>
           What sets us apart?
           <ul
             style={{
@@ -56,7 +56,7 @@ const About = ({ infoRef }) => {
           </ul>
         </Box>
 
-        <Text mt={4}>
+        <Text data-aos="fade-up" mt={4}>
           Whether you're a student,entrepreneur, or professional looking to
           upgrade your skills, <strong>MPAC ICT HUB</strong> is your launchpad
           to a future powered by technology.

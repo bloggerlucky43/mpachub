@@ -30,7 +30,7 @@ export default function TestimonialsMarquee({ reviewRef }) {
   return (
     <Box bg="whiteAlpha.200" ref={reviewRef} py={10} data-aos="zoom-in">
       <Text
-        fontSize={isMobile ? "2xl" : "3xl"}
+        fontSize={isMobile ? "xl" : "3xl"}
         fontWeight="bold"
         textAlign="center"
         color="blue.700"

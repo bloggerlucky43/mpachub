@@ -50,6 +50,7 @@ const Section = ({ sectRef }) => {
               src={heroimg}
               loading="lazy"
               height={isMobile ? "300px" : "600px"}
+              animation={`${float} 3s ease-in-out infinite`}
             />
           </Box>
         )}

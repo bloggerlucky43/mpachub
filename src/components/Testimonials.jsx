@@ -1,4 +1,4 @@
-import { Box, Text, Avatar, Stack } from "@chakra-ui/react";
+import { Box, Text, Avatar, Stack, useBreakpointValue } from "@chakra-ui/react";
 import Marquee from "react-fast-marquee";
 
 const testimonials = [
@@ -26,10 +26,11 @@ const testimonials = [
 ];
 
 export default function TestimonialsMarquee({ reviewRef }) {
+  const isMobile = useBreakpointValue({ base: true, md: false });
   return (
     <Box bg="whiteAlpha.200" ref={reviewRef} py={10} data-aos="zoom-in">
       <Text
-        fontSize="3xl"
+        fontSize={isMobile ? "2xl" : "3xl"}
         fontWeight="bold"
         textAlign="center"
         color="blue.700"

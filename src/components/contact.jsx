@@ -70,7 +70,7 @@ const Contact = ({ contactRef }) => {
               />
               <Box pr={4}>
                 <Text>Email:</Text>
-                <Text>mpachub@gmail.com,mpacicthub@gmail.com</Text>
+                <Text>mpachub@gmail.com,mpachubng@gmail.com</Text>
               </Box>
             </Flex>
 
@@ -84,7 +84,7 @@ const Contact = ({ contactRef }) => {
               />
               <Box>
                 <Text>Call:</Text>
-                <Text>090384757483</Text>
+                <Text>08101524067, 09122819318 </Text>
               </Box>
             </Flex>
             <Flex p={4} align="center">
@@ -220,7 +220,7 @@ const Contact = ({ contactRef }) => {
                 />
                 <Box>
                   <Text>Email:</Text>
-                  <Text>mpachub@gmail.com,mpacicthub@gmail.com</Text>
+                  <Text>mpachub@gmail.com,mpachubng@gmail.com</Text>
                 </Box>
               </Flex>
 
@@ -234,7 +234,7 @@ const Contact = ({ contactRef }) => {
                 />
                 <Box>
                   <Text>Call:</Text>
-                  <Text>090384757483</Text>
+                  <Text>08101524067, 09122819318 </Text>
                 </Box>
               </Flex>
 

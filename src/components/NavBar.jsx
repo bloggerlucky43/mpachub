@@ -44,14 +44,13 @@ const NavBar = ({ onNavClick, refs }) => {
                 <Portal>
                   <Drawer.Backdrop />
                   <Drawer.Positioner>
-                    <Drawer.Content>
-                      <Drawer.Header>Login</Drawer.Header>
+                    <Drawer.Content
+                      bg="whiteAlpha.100"
+                      backdropFilter="blur(12px)">
+                      <Drawer.Header color="white">Login</Drawer.Header>
                       <Drawer.Body>
                         <Login />
                       </Drawer.Body>
-                      <Drawer.Footer>
-                        <Button variant="outline">Cancel</Button>
-                      </Drawer.Footer>
                       <Drawer.CloseTrigger asChild>
                         <CloseButton size="sm" />
                       </Drawer.CloseTrigger>
@@ -70,15 +69,13 @@ const NavBar = ({ onNavClick, refs }) => {
                 <Portal>
                   <Drawer.Backdrop />
                   <Drawer.Positioner>
-                    <Drawer.Content bg="black">
-                      <Drawer.Header></Drawer.Header>
+                    <Drawer.Content
+                      bg="whiteAlpha.100"
+                      backdropFilter="blur(12px)">
+                      <Drawer.Header color="white">Sign up</Drawer.Header>
                       <Drawer.Body>
                         <Register />
                       </Drawer.Body>
-                      <Drawer.Footer>
-                        <Button variant="outline">Cancel</Button>
-                        <Button>Save</Button>
-                      </Drawer.Footer>
                       <Drawer.CloseTrigger asChild>
                         <CloseButton size="sm" />
                       </Drawer.CloseTrigger>
@@ -132,8 +129,10 @@ const NavBar = ({ onNavClick, refs }) => {
               <Portal>
                 <Drawer.Backdrop />
                 <Drawer.Positioner>
-                  <Drawer.Content>
-                    <Drawer.Header>Login</Drawer.Header>
+                  <Drawer.Content
+                    bg="whiteAlpha.100"
+                    backdropFilter="blur(12px)">
+                    <Drawer.Header color="white">Login</Drawer.Header>
                     <Drawer.Body>
                       <Login />
                     </Drawer.Body>
@@ -158,7 +157,7 @@ const NavBar = ({ onNavClick, refs }) => {
                   <Drawer.Content
                     bg="whiteAlpha.100"
                     backdropFilter="blur(12px)">
-                    <Drawer.Header>Apply</Drawer.Header>
+                    <Drawer.Header color="white">Sign up</Drawer.Header>
                     <Drawer.Body>
                       <Register />
                     </Drawer.Body>

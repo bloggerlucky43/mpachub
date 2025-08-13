@@ -1,16 +1,22 @@
+import { useState } from "react";
 import {
   Box,
   Text,
   Button,
   Flex,
   Image,
+  Drawer,
+  Portal,
+  CloseButton,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import FadeContent from "./styles/FadeContent";
 import TextType from "./styles/TextType";
 import heroimg from "../assets/hero-img.png";
+import Register from "./auth/register";
 import "../components/ui/section.css";
 const Section = ({ sectRef }) => {
+  const [showModal, setShowModal] = useState(false);
   const isMobile = useBreakpointValue({ base: true, md: false });
   return (
     <Flex
@@ -56,14 +62,34 @@ const Section = ({ sectRef }) => {
             cursorCharacter="_"
           />
         </FadeContent>
-        <Button
-          bg="primary"
-          justifySelf="center"
-          mt={6}
-          size="lg"
-          color="white">
-          Register for a course
-        </Button>
+        <Drawer.Root
+          open={showModal}
+          onOpenChange={(e) => setShowModal(e.showModal)}>
+          <Drawer.Trigger asChild>
+            <Button
+              bg="primary"
+              justifySelf="center"
+              mt={6}
+              size="lg"
+              color="white">
+              Register for a course
+            </Button>
+          </Drawer.Trigger>
+          <Portal>
+            <Drawer.Backdrop />
+            <Drawer.Positioner>
+              <Drawer.Content bg="whiteAlpha.100" backdropFilter="blur(12px)">
+                <Drawer.Header color="white">Sign up</Drawer.Header>
+                <Drawer.Body>
+                  <Register />
+                </Drawer.Body>
+                <Drawer.CloseTrigger asChild>
+                  <CloseButton size="sm" />
+                </Drawer.CloseTrigger>
+              </Drawer.Content>
+            </Drawer.Positioner>
+          </Portal>
+        </Drawer.Root>
       </Box>
       <Box
         p={4}

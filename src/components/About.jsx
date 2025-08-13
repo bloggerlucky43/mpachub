@@ -1,6 +1,16 @@
-import { Box, Button, Text } from "@chakra-ui/react";
+import { useState } from "react";
+import {
+  Box,
+  Button,
+  Text,
+  Drawer,
+  Portal,
+  CloseButton,
+} from "@chakra-ui/react";
+import Register from "./auth/register";
 
 const About = ({ infoRef }) => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <Box
       ref={infoRef}
@@ -53,14 +63,35 @@ const About = ({ infoRef }) => {
         </Text>
       </Box>
 
-      <Button
-        mt={6}
-        bg="primary"
-        size="lg"
-        color="white"
-        _hover={{ bg: "primary" }}>
-        Register for a course today?
-      </Button>
+      <Drawer.Root
+        open={showModal}
+        onOpenChange={(e) => setShowModal(e.showModal)}>
+        <Drawer.Trigger asChild>
+          <Button
+            mt={6}
+            bg="primary"
+            size="lg"
+            color="white"
+            _hover={{ bg: "primary" }}>
+            Register for a course today?
+          </Button>
+        </Drawer.Trigger>
+        <Portal>
+          <Drawer.Backdrop />
+          <Drawer.Positioner>
+            \
+            <Drawer.Content bg="whiteAlpha.100" backdropFilter="blur(12px)">
+              <Drawer.Header color="white">Sign up</Drawer.Header>
+              <Drawer.Body>
+                <Register />
+              </Drawer.Body>
+              <Drawer.CloseTrigger asChild>
+                <CloseButton size="sm" />
+              </Drawer.CloseTrigger>
+            </Drawer.Content>
+          </Drawer.Positioner>
+        </Portal>
+      </Drawer.Root>
     </Box>
   );
 };

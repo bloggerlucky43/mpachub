@@ -28,12 +28,12 @@ const testimonials = [
 export default function TestimonialsMarquee({ reviewRef }) {
   const isMobile = useBreakpointValue({ base: true, md: false });
   return (
-    <Box bg="whiteAlpha.200" ref={reviewRef} py={10} data-aos="zoom-in">
+    <Box bg="blue.800" opacity={0.9} ref={reviewRef} py={10} data-aos="zoom-in">
       <Text
-        fontSize={isMobile ? "xl" : "3xl"}
+        fontSize={isMobile ? "xl" : "2xl"}
         fontWeight="bold"
         textAlign="center"
-        color="blue.700"
+        color="white"
         mb={6}>
         What Our Students Say
       </Text>

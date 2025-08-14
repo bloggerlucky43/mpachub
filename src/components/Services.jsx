@@ -8,13 +8,23 @@ import {
 } from "@chakra-ui/react";
 import { services } from "./servicelist";
 const Services = ({ servicesref }) => {
+  const isMobile = useBreakpointValue({ base: true, md: false });
   return (
-    <Box ref={servicesref} data-aos="fade-up" p={4} justifyContent="center">
+    <Box
+      ref={servicesref}
+      data-aos="fade-up"
+      p={4}
+      bg="gray.100"
+      justifyContent="center">
       <Box>
-        <Text fontSize="xx-large" textAlign="center">
+        <Text
+          fontSize={isMobile ? "xl" : "xx-large"}
+          fontWeight={isMobile ? "bold" : "bolder"}
+          color="primary"
+          textAlign="center">
           SERVICES
         </Text>
-        <Text fontSize="md" mt={4} mb={4} textAlign="center">
+        <Text color="gray.800" fontSize="md" mt={4} mb={4} textAlign="center">
           Our Services at MPAC ICT HUB includes
         </Text>
       </Box>
@@ -49,7 +59,7 @@ const Services = ({ servicesref }) => {
               mb={2}>
               {service.title}
             </Text>
-            <Text fontSize="md" textAlign={"center"} color="white">
+            <Text fontSize="md" textAlign={"center"} color="gray.800">
               {service.description}
             </Text>
           </Box>

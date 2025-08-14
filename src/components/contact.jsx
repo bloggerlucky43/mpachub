@@ -25,9 +25,9 @@ const Contact = ({ contactRef }) => {
     return alert("Message sent successfully!");
   }
   return (
-    <Box ref={contactRef}>
+    <Box bg="white.800" ref={contactRef}>
       {isMobile ? (
-        <Box p={4} mb={8} mt={8} color="white">
+        <Box p={4} mb={8} mt={2} justifyContent="center" color="gray.800">
           <Box data-aos="fade-up">
             <Text
               fontWeight="bold"
@@ -42,13 +42,22 @@ const Contact = ({ contactRef }) => {
               a message
             </Text>
           </Box>
-          <Box data-aos="fade-up">
+          <Box
+            bg="white"
+            justifySelf="center"
+            justifyContent="center"
+            boxShadow="lg"
+            borderRadius="md"
+            w="80%"
+            mb={4}
+            data-aos="fade-up">
             <Flex mt={4} p={4} align="center" gap={4}>
               <Icon
                 as={FaLocationArrow}
                 bg="primary"
                 boxSize={8}
                 p={2}
+                color="white"
                 borderRadius="full"
               />
               <Box>
@@ -64,13 +73,15 @@ const Contact = ({ contactRef }) => {
               <Icon
                 as={FaInbox}
                 bg="primary"
+                color="white"
                 borderRadius="full"
                 boxSize={8}
                 p={2}
               />
-              <Box pr={4}>
+              <Box>
                 <Text>Email:</Text>
-                <Text>mpachub@gmail.com,mpachubng@gmail.com</Text>
+                <Text>mpachub@gmail.com,</Text>
+                <Text>mpachubng@gmail.com</Text>
               </Box>
             </Flex>
 
@@ -80,6 +91,7 @@ const Contact = ({ contactRef }) => {
                 bg="primary"
                 boxSize={8}
                 p={2}
+                color="white"
                 borderRadius="full"
               />
               <Box>
@@ -96,7 +108,7 @@ const Contact = ({ contactRef }) => {
                 p={2}
                 borderRadius="full"
                 href="https://web.facebook.com/profile.php?id=61578221914150">
-                <FaFacebook />
+                <FaFacebook color="white" />
               </Box>
               <Box
                 ml={2}
@@ -105,12 +117,18 @@ const Contact = ({ contactRef }) => {
                 borderRadius="full"
                 as="a"
                 href="https://www.instagram.com/mpac.icthub/">
-                <FaInstagram />
+                <FaInstagram color="white" />
               </Box>
             </Flex>
           </Box>
 
-          <Box p={6} rounded="md" w="100%" data-aos="fade-down">
+          <Box
+            p={6}
+            boxShadow="lg"
+            justifySelf="center"
+            rounded="md"
+            w="80%"
+            data-aos="fade-down">
             <Fieldset.Root size="lg" maxW="md">
               <form onSubmit={handleSubmit}>
                 <Fieldset.Content display="flex" p={4}>
@@ -170,12 +188,7 @@ const Contact = ({ contactRef }) => {
           </Box>
         </Box>
       ) : (
-        <Box
-          // data-aos="zoom-in"
-          p={8}
-          mb={8}
-          mt={8}
-          color="white">
+        <Box data-aos="zoom-in" p={8} mb={8} mt={8} color="gray.800">
           <Box>
             <Text
               textAlign="center"
@@ -191,13 +204,14 @@ const Contact = ({ contactRef }) => {
             </Text>
           </Box>
 
-          <Flex justify="space-between" align="center" mt={8}>
+          <Flex justify="center" boxShadow="lg" align="center" mt={8}>
             <Box p={6} rounded="md">
               <Flex gap={4} mt={4} p={4} align="center">
                 <Icon
                   as={FaLocationArrow}
                   bg="primary"
                   boxSize={8}
+                  color="white"
                   p={2}
                   borderRadius="full"
                 />
@@ -215,6 +229,7 @@ const Contact = ({ contactRef }) => {
                   as={FaInbox}
                   bg="primary"
                   boxSize={8}
+                  color="white"
                   p={2}
                   borderRadius="full"
                 />
@@ -228,6 +243,7 @@ const Contact = ({ contactRef }) => {
                 <Icon
                   as={FaPhone}
                   bg="primary"
+                  color="white"
                   boxSize={8}
                   p={2}
                   borderRadius="full"
@@ -248,7 +264,7 @@ const Contact = ({ contactRef }) => {
                   p={2}
                   borderRadius="full"
                   href="https://web.facebook.com/profile.php?id=61578221914150">
-                  <FaFacebook />
+                  <FaFacebook color="white" />
                 </Box>
                 <Box
                   ml={2}
@@ -257,13 +273,13 @@ const Contact = ({ contactRef }) => {
                   borderRadius="full"
                   as="a"
                   href="https://www.instagram.com/mpac.icthub/">
-                  <FaInstagram />
+                  <FaInstagram color="white" />
                 </Box>
               </Flex>
             </Box>
 
-            <Box p={6} rounded="md" w="50%">
-              <Fieldset.Root size="lg" maxW="md">
+            <Box p={6} rounded="md" w="40%">
+              <Fieldset.Root size="md" maxW="lg">
                 <form onSubmit={handleSubmit}>
                   <Fieldset.Content display="flex" p={4}>
                     <Field.Root>

@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { Box } from "@chakra-ui/react";
-import Beams from "../components/ui/background/beam";
 import NavBar from "../components/NavBar";
 import Section from "../components/section";
 import Services from "../components/Services";
@@ -22,28 +21,8 @@ const Landing = () => {
   };
 
   return (
-    <Box position="relative" minH="100vh" overflow="hidden">
-      <Box
-        position="absolute"
-        top={0}
-        left={0}
-        w="100%"
-        h="100%"
-        zIndex={0}
-        pointerEvents="none">
-        <Beams
-          beamWidth={1}
-          beamHeight={20}
-          beamNumber={10}
-          lightColor="#FFFFFF"
-          speed={10}
-          noiseIntensity={0}
-          scale={0.2}
-          rotation={20}
-        />
-      </Box>
-
-      <Box position="relative" zIndex={1} color="white" bg="whiteAlpha.100">
+    <Box minH="100vh" overflow="hidden">
+      <Box zIndex={1} color="white">
         <NavBar
           onNavClick={scrollToSection}
           refs={{

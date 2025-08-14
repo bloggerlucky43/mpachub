@@ -18,9 +18,9 @@ const NavBar = ({ onNavClick, refs }) => {
 
   return (
     <Box
-      bg="whiteAlpha.100"
+      bg="rgba(30, 58, 138, 0.9)"
       backdropFilter="blur(12px)"
-      boxShadow="sm"
+      boxShadow="md"
       data-aos="fade-down"
       data-aos-duration="1000"
       data-aos-delay="100"
@@ -32,7 +32,7 @@ const NavBar = ({ onNavClick, refs }) => {
       {isMobile ? (
         <Box>
           <Flex p={2} alignItems="center" justifyContent="space-between">
-            <Text color="primary" fontWeight={800} fontSize="x-large">
+            <Text color="white" fontWeight={800} fontSize="lg">
               MPAC HUB
             </Text>
             <Box>
@@ -91,7 +91,7 @@ const NavBar = ({ onNavClick, refs }) => {
         </Box>
       ) : (
         <Flex p={2} alignItems="center" justifyContent="space-around">
-          <Text color="primary" fontWeight={800} fontSize="xx-large">
+          <Text color="white" fontWeight={800} fontSize="xx-large">
             MPAC HUB
           </Text>
           <Flex gap={8} justifyContent="center">

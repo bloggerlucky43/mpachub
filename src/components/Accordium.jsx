@@ -1,37 +1,46 @@
-import { Accordion, Span, Text } from "@chakra-ui/react";
+import {
+  Accordion,
+  Box,
+  Span,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 
 const Accordium = ({ questionRef }) => {
+  const isMobile = useBreakpointValue({ base: true, md: false });
+
   return (
-    <Accordion.Root
-      collapsible
-      defaultValue={["b"]}
-      p={4}
-      m={4}
-      w="80%"
-      ref={questionRef}
-      justifySelf="center"
-      justifyContent="center">
-      <Text
-        textAlign="center"
-        fontSize="x-large"
-        fontWeight="bold"
-        data-aos="fade-up"
-        color="blue.700"
-        mb={4}>
-        FREQUENTLY ASKED QUESTIONS
-      </Text>
-      {items.map((item, index) => (
-        <Accordion.Item key={index} value={item.value}>
-          <Accordion.ItemTrigger>
-            <Span flex="1">{item.title}</Span>
-            <Accordion.ItemIndicator />
-          </Accordion.ItemTrigger>
-          <Accordion.ItemContent>
-            <Accordion.ItemBody>{item.text}</Accordion.ItemBody>
-          </Accordion.ItemContent>
-        </Accordion.Item>
-      ))}
-    </Accordion.Root>
+    <Box bg="blue.900" color="white">
+      <Accordion.Root
+        collapsible
+        defaultValue={["b"]}
+        p={4}
+        m={4}
+        w="80%"
+        ref={questionRef}
+        justifySelf="center"
+        justifyContent="center">
+        <Text
+          textAlign="center"
+          fontSize={isMobile ? "lg" : "x-large"}
+          fontWeight="bold"
+          data-aos="fade-up"
+          mb={4}>
+          FREQUENTLY ASKED QUESTIONS
+        </Text>
+        {items.map((item, index) => (
+          <Accordion.Item key={index} value={item.value}>
+            <Accordion.ItemTrigger>
+              <Span flex="1">{item.title}</Span>
+              <Accordion.ItemIndicator />
+            </Accordion.ItemTrigger>
+            <Accordion.ItemContent>
+              <Accordion.ItemBody>{item.text}</Accordion.ItemBody>
+            </Accordion.ItemContent>
+          </Accordion.Item>
+        ))}
+      </Accordion.Root>
+    </Box>
   );
 };
 

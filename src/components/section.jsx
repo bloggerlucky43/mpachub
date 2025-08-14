@@ -13,7 +13,7 @@ import {
 import { keyframes } from "@emotion/react";
 import FadeContent from "./styles/FadeContent";
 import TextType from "./styles/TextType";
-import heroimg from "../assets/hero-img.png";
+import heroimg from "../assets/heroimg.png";
 import Register from "./auth/register";
 import "../components/ui/section.css";
 const Section = ({ sectRef }) => {
@@ -32,6 +32,7 @@ const Section = ({ sectRef }) => {
   return (
     <Flex
       ref={sectRef}
+      bg="rgba(30, 58, 138, 0.9)"
       data-aos="fade-up"
       backdropFilter="blur(12px)"
       opacity={0.9}
@@ -49,6 +50,7 @@ const Section = ({ sectRef }) => {
             <Image
               src={heroimg}
               loading="lazy"
+              justifySelf="center"
               height={isMobile ? "300px" : "600px"}
               animation={`${float} 3s ease-in-out infinite`}
             />
@@ -83,7 +85,8 @@ const Section = ({ sectRef }) => {
               justifySelf="center"
               mt={6}
               size="lg"
-              color="white">
+              color="white"
+              borderRadius="md">
               Register for a course
             </Button>
           </Drawer.Trigger>

@@ -14,12 +14,13 @@ const About = ({ infoRef }) => {
   return (
     <Box
       ref={infoRef}
+      bg="#FDFDFD"
       data-aos="fade-up"
       p={8}
+      color="gray.800"
       textAlign="center"
-      mb={8}
-      mt={8}
-      color="white">
+      mb={4}
+      mt={4}>
       <Text fontWeight="bold" fontSize="xx-large" mb={4} color="blue.700">
         About Us
       </Text>
@@ -72,7 +73,7 @@ const About = ({ infoRef }) => {
             bg="primary"
             size="lg"
             color="white"
-            _hover={{ bg: "primary" }}>
+            _hover={{ bg: "secondary" }}>
             Register for a course today?
           </Button>
         </Drawer.Trigger>

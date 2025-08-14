@@ -15,11 +15,10 @@ const config = defineConfig({
     tokens: {
       colors: {
         primary: "#1E3A8A",
-        secondary: "#38BDF8", //light gray
-        accent: "#2C2C2C", //#1A1A1A,
-        text: "#1F2937", // #EAEAEA
-        background: "#FFFFFF",
-        border: "#333333",
+        secondary: "#344f99ff",
+        accent: "#2C2C2C",
+        text: "black",
+        background: "#F0F8FF",
       },
     },
   },
